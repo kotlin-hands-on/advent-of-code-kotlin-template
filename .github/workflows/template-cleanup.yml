@@ -48,8 +48,8 @@ jobs:
           mkdir -p src/main/kotlin/${GROUP//.//}
           mkdir -p src/test/kotlin/${GROUP//.//}
           cp -R .github/template-cleanup/* .
-          mv -R src/main/kotlin/com/github/hsz/aoc/* src/main/kotlin/${GROUP//.//}/
-          mv -R src/test/kotlin/com/github/hsz/aoc/* src/test/kotlin/${GROUP//.//}/
+          mv src/main/kotlin/com/github/hsz/aoc/* src/main/kotlin/${GROUP//.//}/
+          mv src/test/kotlin/com/github/hsz/aoc/* src/test/kotlin/${GROUP//.//}/
 
           # Cleanup
           rm -rf \
