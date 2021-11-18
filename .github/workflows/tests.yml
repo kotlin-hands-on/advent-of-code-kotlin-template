@@ -1,0 +1,32 @@
+name: Tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+      # Check out current repository
+      - name: Fetch Sources
+        uses: actions/checkout@v2.4.0
+
+      # Validate wrapper
+      - name: Gradle Wrapper Validation
+        uses: gradle/wrapper-validation-action@v1.0.4
+
+      # Setup Java 11 environment for the next steps
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: zulu
+          java-version: 11
+          cache: gradle
+
+      # Run tests
+      - name: Run Tests
+        run: ./gradlew test
