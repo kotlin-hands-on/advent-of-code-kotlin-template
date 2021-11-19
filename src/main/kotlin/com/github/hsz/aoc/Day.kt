@@ -1,10 +1,12 @@
 package com.github.hsz.aoc
 
-abstract class Day(year: Number, day: Number) {
+import com.github.hsz.aoc.utils.Resources
 
-    val input = Resources.asString("aoc${year}/day${day.toString().padStart(2, '0')}.txt")
+abstract class Day(val number: Number) {
 
-    abstract fun part1(input: String): Number
+    val input = Resources.asString("day${number.toString().padStart(2, '0')}.txt")
 
-    abstract fun part2(input: String): Number
+    abstract fun part1(input: String): Any
+
+    abstract fun part2(input: String): Any
 }

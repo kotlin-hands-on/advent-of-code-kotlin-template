@@ -1,4 +1,4 @@
-package com.github.hsz.aoc
+package com.github.hsz.aoc.utils
 
 internal object Resources {
 

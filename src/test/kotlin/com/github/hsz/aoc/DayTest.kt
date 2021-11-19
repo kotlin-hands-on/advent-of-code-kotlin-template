@@ -1,27 +1,16 @@
 package com.github.hsz.aoc
 
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.DynamicTest
+import org.junit.jupiter.api.AfterAll
+import org.junit.jupiter.api.TestInstance
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 abstract class DayTest(val day: Day) {
-
-    fun test(
-        function: (String) -> Number,
-        answer: Number,
-        testData: Collection<Pair<String, Number>> = emptyList(),
-        asserts: Collection<Pair<Number, Number>> = emptyList(),
-    ) =
-        testData.mapIndexed { index, (testInput, expected) ->
-            DynamicTest.dynamicTest("Test case #${index + 1}") {
-                Assertions.assertEquals(expected, function(testInput.trimIndent()))
-            }
-        } +
-            asserts.mapIndexed { index, (testValue, expected) ->
-                DynamicTest.dynamicTest("Test case #${index + 1 + testData.size}") {
-                    Assertions.assertEquals(expected, testValue)
-                }
-            } +
-            DynamicTest.dynamicTest("Solution") {
-                Assertions.assertEquals(answer, function(day.input))
-            }
+    @AfterAll
+    fun solve() {
+        with(day) {
+            println("Solutions for Day $number:")
+            println("Part 1: ${part1(input)}")
+            println("Part 2: ${part2(input)}")
+        }
+    }
 }

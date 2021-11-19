@@ -7,7 +7,6 @@ version = project.property("version").toString()
 
 dependencies {
     testImplementation(kotlin("test"))
-    testImplementation(kotlin("test-junit5"))
 }
 
 repositories {
