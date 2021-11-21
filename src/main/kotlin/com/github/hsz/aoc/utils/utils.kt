@@ -1,11 +1,14 @@
-package com.github.hsz.aoc
+package com.github.hsz.aoc.utils
+
+import java.math.BigInteger
+import java.security.MessageDigest
 
 /**
  * Maps a string containing integers in new lines to a list of integers.
  */
-fun String.ints(): List<Int> = lines().map(String::toInt)
+fun String.ints() = lines().map(String::toInt)
 
 /**
- * Shorthand for [String.toInt].
+ * Converts string to md5 hash.
  */
-operator fun String.unaryPlus() = toInt()
+fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
