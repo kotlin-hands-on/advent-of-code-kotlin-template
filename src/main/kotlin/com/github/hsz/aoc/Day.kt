@@ -2,7 +2,7 @@ package com.github.hsz.aoc
 
 import com.github.hsz.aoc.utils.Resources
 
-abstract class Day(number: Number) {
+abstract class Day(val number: Number) {
 
     private val input = Resources.asString("day${number.toString().padStart(2, '0')}.txt")
 
