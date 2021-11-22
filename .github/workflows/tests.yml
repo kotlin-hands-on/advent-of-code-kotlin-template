@@ -15,10 +15,6 @@ jobs:
       - name: Fetch Sources
         uses: actions/checkout@v2.4.0
 
-      # Validate wrapper
-      - name: Gradle Wrapper Validation
-        uses: gradle/wrapper-validation-action@v1.0.4
-
       # Setup Java 11 environment for the next steps
       - name: Setup Java
         uses: actions/setup-java@v2
