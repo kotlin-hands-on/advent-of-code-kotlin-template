@@ -55,7 +55,8 @@ jobs:
           rm -rf \
             .github/readme \
             .github/template-cleanup \
-            .github/workflows/template-cleanup.yml
+            .github/workflows/template-cleanup.yml \
+            LICENSE
           
           # Remove leftover empty directories
           find . -type d -empty -delete
