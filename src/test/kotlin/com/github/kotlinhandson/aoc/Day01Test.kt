@@ -9,8 +9,8 @@ class Day01Test : DayTest() {
 
     @Test
     override fun `Part 1`() {
-        assertEquals(0, day.part1("test_input")) // check against test input
-        assertEquals(0, day.part1())                   // check solution against input data
+        assertEquals(0, day.part1("test_input"))    // check against test input
+        assertEquals(0, day.part1())                // check solution against input data
     }
 
     @Test
