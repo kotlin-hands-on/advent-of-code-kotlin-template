@@ -2,23 +2,18 @@ plugins {
     kotlin("jvm") version "1.6.0"
 }
 
-group = project.property("group").toString()
-version = project.property("version").toString()
-
-dependencies {
-    testImplementation(kotlin("test"))
-}
-
 repositories {
     mavenCentral()
 }
 
 tasks {
-    withType<Test> {
-        useJUnitPlatform()
+    sourceSets {
+        main {
+            java.srcDirs("src")
+        }
     }
 
     wrapper {
-        gradleVersion = project.findProperty("gradleVersion").toString()
+        gradleVersion = "7.3"
     }
 }

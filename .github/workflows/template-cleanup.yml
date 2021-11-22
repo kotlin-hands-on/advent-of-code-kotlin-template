@@ -39,17 +39,8 @@ jobs:
           sed -i "s/%REPOSITORY%/${GITHUB_REPOSITORY/\//\\/}/g" .github/template-cleanup/*
           sed -i "s/%GROUP%/$GROUP/g" .github/template-cleanup/*
 
-          # Replace template package name in project files with $GROUP
-          find src -type f -exec sed -i "s/com.github.kotlinhandson.aoc/$GROUP/g" {} +
-          find src -type f -exec sed -i "s/Template/$NAME/g" {} +
-          find src -type f -exec sed -i "s/JetBrains/$ACTOR/g" {} +
-
           # Move content
-          mkdir -p src/main/kotlin/${GROUP//.//}
-          mkdir -p src/test/kotlin/${GROUP//.//}
           cp -R .github/template-cleanup/* .
-          mv src/main/kotlin/com/github/kotlinhandson/aoc/* src/main/kotlin/${GROUP//.//}/
-          mv src/test/kotlin/com/github/kotlinhandson/aoc/* src/test/kotlin/${GROUP//.//}/
 
           # Cleanup
           rm -rf \

@@ -1,12 +1,11 @@
-package com.github.kotlinhandson.aoc.utils
-
+import java.io.File
 import java.math.BigInteger
 import java.security.MessageDigest
 
 /**
- * Maps a string containing integers in new lines to a list of integers.
+ * Reads lines from the given input txt file.
  */
-fun String.ints() = lines().map(String::toInt)
+fun readInput(name: String) = File("src", "$name.txt").readLines()
 
 /**
  * Converts string to md5 hash.

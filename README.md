@@ -20,7 +20,7 @@ Right after the [@actions-user][actions-user] actor pushes the second commit to 
 From now, everything's in your hands!
 Join the [Advent of Code][aoc] contest, solve the Day O1 as soon as it is published.
 
-For the following days, copy the `Day01.kt` solution file, its `Day01Test.kt` tests, and name it with an incremented day.
+For the following days, copy the `Day01.kt` solution file and increment the day number.
 
 > Remember to join the Kotlin contest!
 > 
@@ -34,75 +34,66 @@ After you create a new project based on the current template repository using th
 
 ```
 .
-├── README.md                           README file
-├── build.gradle.kts                    Gradle configuration created with Kotlin DSL
+├── README.md               README file
+├── build.gradle.kts        Gradle configuration created with Kotlin DSL
 ├── gradle
-│   └── wrapper                         Gradle Wrapper
-├── gradle.properties                   Gradle configuration properties
-├── gradlew                             *nix Gradle Wrapper script
-├── gradlew.bat                         Windows Gradle Wrapper script
-├── settings.gradle.kts                 Gradle project settings
+│   └── wrapper             Gradle Wrapper
+├── gradle.properties       Gradle configuration properties
+├── gradlew                 *nix Gradle Wrapper script
+├── gradlew.bat             Windows Gradle Wrapper script
+├── settings.gradle.kts     Gradle project settings
 └── src
-    ├── main
-    │   ├── kotlin
-    │   │   └── com.github.you.project
-    │   │       ├── Day.kt              Base class for Day* implementations
-    │   │       ├── Day01.kt            An empty implementation for the first AoC day
-    │   │       └── utils
-    │   │           ├── Resources.kt    Utility class for loading input txt files
-    │   │           └── utils.kt        A set of utility methods shared across your classes
-    │   └── resources
-    │       └── day01.txt               An empty file for the Day 01 input data
-    └── test
-        └── kotlin
-            └── com.github.you.project
-                ├── DayTest.kt          Base test class
-                └── Day01Test.kt        Class to test your implementation against test data 
+    ├── Day01.kt            An empty implementation for the first AoC day
+    ├── Day01.txt           An empty file for the Day 01 input data
+    ├── Day01_test.txt      An optional Day 01 test input data used for assertion
+    └── utils.kt            A set of utility methods shared across your days
 ```
 
-After the first puzzle appears, go to the `Day01.kt` and for each `part1` and `part2` classes, provide an algorithm implementation using the provided `input` data loaded from the `day01.txt` file.
+When the first puzzle appears, go to the `Day01.kt` and for each `part1` and `part2` functions, provide an algorithm implementation using the `input` data loaded from the `src/Day01.txt` file.
 This input data is common for both parts, and you can find it on the bottom of each day on the [Advent of Code][aoc] page.
 
-To read the input data as a list of strings, you can go with the `String.ints()` utility method provided in the [`utils.kt`][file:utils] file, like:
+To read the input data, you can go with the `readInput(name: String)` utility method provided in the [`utils.kt`][file:utils] file, like:
 
 ```kotlin
-class Day01 : Day(1) {
+fun part1(input: List<String>): Int {
+    return input.size
+}
 
-    override fun part1(input: String): Int {
-        return input.ints().sum()
-    }
-
-    // ...
+fun main() {
+    val input = readInput("Day01")
+    part1(input).also(::println)
 }
 ```
 
-This file also contains the `String.md5()` method for generating MD5 has out of the given string and expects more helper functions for the sake of the [KISS principle][kiss].
+The [`utils.kt`][file:utils] file also contains the `String.md5()` method for generating MD5 has out of the given string and expects more helper functions for the sake of the [KISS principle][kiss].
 
-To check if everything works as expected during the development, you can use the test data and answers within each day's story and provide them for your `DayTest` test implementation.
-You may want to run such a test case by clicking the _Test All Days_ Run/Debug Configuration provided in the top-right toolbar or check the test result for each day separately.
-
-To go with the next day, place the `day02.txt` file into the `resources` with relevant input data, create `Day02.kt` file with the class implementation:
+Each puzzle describes some test conditions, a small portion of the information that helps check if the produced value for the given test input is valid.
+To handle that case, you can put such an input into a separated file and perform a standard assertion against the output, like:
 
 ```kotlin
-class Day02 : Day(2) { 
-    // ...
+fun main() {
+    val testInput = readInput("Day01_test")
+    assert(part1(testInput) == 13)
 }
 ```
 
-Then just provide tests for the second day in a similar manner:
+The final result of your algorithm will be printed on the screen so that you can pass it to the Advent of Code website.
+
+To go with the next day, place the `Day02.txt` file into the `src` with relevant input data and create `Day02.kt` file with a similar code scaffold:
 
 ```kotlin
-class Day02Test : DayTest() {
-    
-    override val day = Day02()
+fun part1(input: List<String>): Int {
+    return 0
+}
 
-    @Test
-    override fun `Part 1`() {
-        assertEquals(0, day.part1("test_input")) // check against test input
-        assertEquals(0, day.part1())             // check solution against input data
-    }
+fun part2(input: List<String>): Int {
+    return 0
+}
 
-    // ...
+fun main() {
+    val input = readInput("Day02")
+    part1(input).also(::println)
+    part2(input).also(::println)
 }
 ```
 
@@ -123,4 +114,4 @@ If you stuck with Kotlin-specific questions or anything related to this template
 [kotlin]: https://kotlinlang.org
 [slack]: https://surveys.jetbrains.com/s3/kotlin-slack-sign-up
 [file:kotlin]: .github/readme/kotlin.svg
-[file:utils]: src/main/kotlin/com/github/kotlinhandson/aoc/utils/utils.kt
+[file:utils]: src/utils.kt

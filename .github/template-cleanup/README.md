@@ -1,5 +1,3 @@
-![Tests](https://github.com/%REPOSITORY%/workflows/Tests/badge.svg)
-
 # %NAME%
 
 Welcome to the Advent of Code[^aoc] Kotlin project created by [%NAME%][github] using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
