@@ -73,11 +73,3 @@ jobs:
         with:
           branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      # Create new release draft - which is not publicly visible and requires manual acceptance
-      - name: Update repository topics
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          jq -n '{"names":["aoc-2021-in-kotlin", "kotlin", "advent-of-code", "adventofcode"]}' \
-            | gh api -X PUT /repos/{owner}/{repo}/topics --input -
