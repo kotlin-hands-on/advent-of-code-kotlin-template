@@ -8,6 +8,10 @@ abstract class DayTest {
 
     abstract val day: Day
 
+    abstract fun `Part 1`()
+
+    abstract fun `Part 2`()
+
     @AfterAll
     fun solve() {
         with(day) {

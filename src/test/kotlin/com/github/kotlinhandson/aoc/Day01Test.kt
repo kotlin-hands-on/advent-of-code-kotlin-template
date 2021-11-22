@@ -8,14 +8,14 @@ class Day01Test : DayTest() {
     override val day = Day01()
 
     @Test
-    fun `Part 1`() {
-        assertEquals(0, day.part1("foo")) // check against test input
-        assertEquals(0, day.part1()) // check against input data
+    override fun `Part 1`() {
+        assertEquals(0, day.part1("test_input")) // check against test input
+        assertEquals(0, day.part1())                   // check solution against input data
     }
 
     @Test
-    fun `Part 2`() {
-        assertEquals(0, day.part2("bar"))
+    override fun `Part 2`() {
+        assertEquals(0, day.part2("test_input"))
         assertEquals(0, day.part2())
     }
 }
