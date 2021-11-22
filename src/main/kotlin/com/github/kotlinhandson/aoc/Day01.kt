@@ -1,4 +1,4 @@
-package com.github.hsz.aoc
+package com.github.kotlinhandson.aoc
 
 class Day01 : Day(1) {
 

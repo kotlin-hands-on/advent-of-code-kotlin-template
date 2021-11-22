@@ -1,6 +1,6 @@
-package com.github.hsz.aoc
+package com.github.kotlinhandson.aoc
 
-import com.github.hsz.aoc.utils.Resources
+import com.github.kotlinhandson.aoc.utils.Resources
 
 abstract class Day(val number: Number) {
 

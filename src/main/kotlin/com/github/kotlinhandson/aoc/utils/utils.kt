@@ -1,4 +1,4 @@
-package com.github.hsz.aoc.utils
+package com.github.kotlinhandson.aoc.utils
 
 import java.math.BigInteger
 import java.security.MessageDigest
