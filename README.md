@@ -45,7 +45,7 @@ After you create a new project based on the current template repository using th
 └── src
     ├── Day01.kt            An empty implementation for the first AoC day
     ├── Day01.txt           An empty file for the Day 01 input data
-    ├── Day01_test.txt      An optional Day 01 test input data used for assertion
+    ├── Day01_test.txt      An optional Day 01 test input data used for checks
     └── Utils.kt            A set of utility methods shared across your days
 ```
 
@@ -68,14 +68,14 @@ fun main() {
 The [`Utils.kt`][file:utils] file also contains the `String.md5()` method for generating MD5 has out of the given string and expects more helper functions for the sake of the [KISS principle][kiss].
 
 Each puzzle describes some test conditions, a small portion of the information that helps check if the produced value for the given test input is valid.
-To handle that case, you can put such an input into a separated file and perform a standard assertion against the output, like:
+To handle that case, you can put such an input into a separated file and perform a check against the output, like:
 
 ```kotlin
 fun main() {
     // ...
     
     val testInput = readInput("Day01_test")
-    assert(part1(testInput) == 13)
+    check(part1(testInput) == 13)
 }
 ```
 
