@@ -5,6 +5,8 @@ Every year since then, with the first day of December, a programming puzzles con
 A set of Christmas-oriented challenges provide any input you have to use to answer using the language of your choice.
 We offer you a template prepared to use with [Kotlin][kotlin] language within this repository.
 
+![][file:cover]
+
 ## Workflow
 **Advent of Code Kotlin Template** is a particular type of GitHub repository that lets you speed up the setup phase and start writing your AoC solutions immediately.
 
@@ -118,5 +120,5 @@ If you stuck with Kotlin-specific questions or anything related to this template
 [kiss]: https://en.wikipedia.org/wiki/KISS_principle
 [kotlin]: https://kotlinlang.org
 [slack]: https://surveys.jetbrains.com/s3/kotlin-slack-sign-up
-[file:kotlin]: .github/readme/kotlin.svg
+[file:cover]: .github/readme/cover.png
 [file:utils]: src/Utils.kt
