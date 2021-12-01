@@ -4,7 +4,7 @@ Welcome to the Advent of Code[^aoc] Kotlin project created by [%ACTOR%][github] 
 
 In this repository, %ACTOR% is about to provide solutions for the puzzles using [Kotlin][kotlin] language.
 
-If you stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
+If you're stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
 
 - [Kotlin docs][docs]
 - [Kotlin Slack][slack]
@@ -12,9 +12,9 @@ If you stuck with Kotlin-specific questions or anything related to this template
 
 
 [^aoc]:
-    [Advent of Code][aoc] – an annual event in December since 2015.
-    Every year since then, with the first day of December, a programming puzzles contest is published every day for twenty-four days.
-    A set of Christmas-oriented challenges provide any input you have to use to answer using the language of your choice.
+    [Advent of Code][aoc] – An annual event of Christmas-oriented programming challenges started December 2015.
+    Every year since then, beginning on the first day of December, a programming puzzle is published every day for twenty-four days.
+    You can solve the puzzle and provide an answer using the language of your choice.
 
 [aoc]: https://adventofcode.com
 [docs]: https://kotlinlang.org/docs/home.html
