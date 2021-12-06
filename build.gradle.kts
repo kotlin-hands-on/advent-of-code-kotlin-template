@@ -7,13 +7,15 @@ repositories {
 }
 
 tasks {
-    sourceSets {
-        main {
-            java.srcDirs("src")
-        }
-    }
-
     wrapper {
         gradleVersion = "7.3"
     }
+}
+
+dependencies {
+    testImplementation(kotlin("test"))
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
