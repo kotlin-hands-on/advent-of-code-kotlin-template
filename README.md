@@ -26,7 +26,7 @@ For the following days, copy the `Day01.kt` solution file and increment the day 
 
 > Remember to join the Kotlin contest!
 > 
-> To do that, edit your project's _About_ section with ⚙️ icon and add the `aoc-2021-in-kotlin` topic to your project.
+> To do that, edit your project's _About_ section with ⚙️ icon and add the `aoc-2022-in-kotlin` topic to your project.
 > 
 > **We will find your repository and count you in our giveaway.** 
 
