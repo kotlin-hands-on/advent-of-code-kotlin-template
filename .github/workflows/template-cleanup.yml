@@ -5,21 +5,22 @@
 name: Template Cleanup
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
 
-  # Run cleaning process only if workflow is triggered by the .../advent-of-code-kotlin-template repository.
+  # Run cleaning process only if workflow is triggered by the non-"advent-of-code-kotlin-template" repository.
   template-cleanup:
     name: Template Cleanup
     runs-on: ubuntu-latest
     if: github.event.repository.name != 'advent-of-code-kotlin-template'
+    permissions:
+      contents: write
     steps:
 
       # Check out current repository
       - name: Fetch Sources
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v3
 
       # Cleanup project
       - name: Cleanup
