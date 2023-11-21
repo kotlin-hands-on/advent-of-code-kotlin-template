@@ -118,6 +118,12 @@ fun main() {
 }
 ```
 
+> ![NOTE]
+> 
+> There is a fork of this repository available which utilizes the Amper tool for project configuration, recently [introduced by JetBrains][amper].
+> 
+> For more, see: [Advent of Code Kotlin Template — Amper][amper-template] project.
+
 ## Getting help
 
 If you stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
@@ -129,6 +135,8 @@ If you stuck with Kotlin-specific questions or anything related to this template
 
 [actions-user]: https://github.com/actions-user
 [aoc]: https://adventofcode.com
+[amper]: https://blog.jetbrains.com/blog/2023/11/09/amper-improving-the-build-tooling-user-experience/
+[amper-template]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template-amper
 [docs]: https://kotlinlang.org/docs/home.html
 [issues]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template/issues
 [kiss]: https://en.wikipedia.org/wiki/KISS_principle
