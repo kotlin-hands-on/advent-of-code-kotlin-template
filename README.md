@@ -7,6 +7,13 @@ We offer you a template prepared to use with [Kotlin][kotlin] language within th
 
 ![][file:cover]
 
+> [!IMPORTANT]
+>
+> This is a fork of the main [Advent of Code Kotlin Template][template] repository which utilizes the Amper tool for project configuration, recently [introduced by JetBrains][amper].
+> 
+> With this version, we swapped the standard Gradle build configuration with `module.yaml` Amper file.
+> For more deails, see [Amper project][amper-github]
+
 ## Workflow
 **Advent of Code Kotlin Template** is a particular type of GitHub repository that lets you speed up the setup phase and start writing your AoC solutions immediately.
 
@@ -39,7 +46,7 @@ After you create a new project based on the current template repository using th
 ```
 .
 ├── README.md               README file
-├── build.gradle.kts        Gradle configuration created with Kotlin DSL
+├── module.yaml             Amper configuration file
 ├── settings.gradle.kts     Gradle project settings
 ├── gradle*                 Gradle wraper files
 └── src
@@ -129,6 +136,9 @@ If you stuck with Kotlin-specific questions or anything related to this template
 
 [actions-user]: https://github.com/actions-user
 [aoc]: https://adventofcode.com
+[amper]: https://blog.jetbrains.com/blog/2023/11/09/amper-improving-the-build-tooling-user-experience/
+[amper-github]: https://github.com/JetBrains/amper
+[template]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template
 [docs]: https://kotlinlang.org/docs/home.html
 [issues]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template/issues
 [kiss]: https://en.wikipedia.org/wiki/KISS_principle
