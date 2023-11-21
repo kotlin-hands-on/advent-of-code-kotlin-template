@@ -38,12 +38,8 @@ After you create a new project based on the current template repository using th
 .
 ├── README.md               README file
 ├── build.gradle.kts        Gradle configuration created with Kotlin DSL
-├── gradle
-│   └── wrapper             Gradle Wrapper
-├── gradle.properties       Gradle configuration properties
-├── gradlew                 *nix Gradle Wrapper script
-├── gradlew.bat             Windows Gradle Wrapper script
 ├── settings.gradle.kts     Gradle project settings
+├── gradle*                 Gradle wraper files
 └── src
     ├── Day01.kt            An empty implementation for the first AoC day
     ├── Day01.txt           An empty file for the Day 01 input data
@@ -51,7 +47,9 @@ After you create a new project based on the current template repository using th
     └── Utils.kt            A set of utility methods shared across your days
 ```
 
-> Note: All task input files are excluded from the repository with `.gitignore` – we should not post them publicly, as Eric Wastl asks for: [Tweet](https://twitter.com/ericwastl/status/1465805354214830081).
+> **Note**
+>
+> All task input files (`src/*.txt`) are excluded from the repository with `.gitignore` – we should not post them publicly, as [Eric Wastl requested for](https://twitter.com/ericwastl/status/1465805354214830081).
 
 When the first puzzle appears, go to the `Day01.kt` and for each `part1` and `part2` functions, provide an algorithm implementation using the `input` data loaded from the `src/Day01.txt` file.
 This input data is common for both parts, and you can find it on the bottom of each day on the [Advent of Code][aoc] page.
