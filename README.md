@@ -20,17 +20,19 @@ How cool is that?
 Right after the [@actions-user][actions-user] actor pushes the second commit to your repository, you're ready to clone it within the IntelliJ IDEA.
 
 From now, everything's in your hands!
-Join the [Advent of Code][aoc] contest, solve the Day O1 as soon as it is published.
+Join the [Advent of Code][aoc] contest, solve the *Day 01* as soon as it is published.
 
 For the following days, copy the `Day01.kt` solution file and increment the day number.
 
+> **Note**
+>
 > Remember to join the Kotlin contest!
 > 
-> To do that, edit your project's _About_ section with ⚙️ icon and add the `aoc-2022-in-kotlin` topic to your project.
+> To do that, edit your project's _About_ section with ⚙️ icon and add the `aoc-2023-in-kotlin` topic to your project.
 > 
 > **We will find your repository and count you in our giveaway.** 
 
-## Content
+## Setup
 
 After you create a new project based on the current template repository using the **Use this template** button, a bare minimal scaffold will appear in your GitHub account with the following structure:
 
@@ -42,9 +44,11 @@ After you create a new project based on the current template repository using th
 ├── gradle*                 Gradle wraper files
 └── src
     ├── Day01.kt            An empty implementation for the first AoC day
+    ├── Utils.kt            A set of utility methods shared across your days
+    │                       
+    │                       (files needed to be manually created)
     ├── Day01.txt           An empty file for the Day 01 input data
-    ├── Day01_test.txt      An optional Day 01 test input data used for checks
-    └── Utils.kt            A set of utility methods shared across your days
+    └── Day01_test.txt      An optional Day 01 test input data used for checks
 ```
 
 > **Note**
@@ -66,6 +70,16 @@ fun main() {
     println(part1(input))
 }
 ```
+
+## Running
+
+To call the algorithm you're implementing, click on the green Play button next to the `fun main()` definition.
+
+![img.png](.github/readme/run.png)
+
+> **Warning**
+>
+> Before running tasks or tests, make sure to create relevant files, like: `src/Day01.txt` or `src/Day01_test.txt`.
 
 The [`Utils.kt`][file:utils] file also contains the `String.md5()` method for generating MD5 hash out of the given string and expects more helper functions for the sake of the [KISS principle][kiss].
 
