@@ -24,7 +24,7 @@ Join the [Advent of Code][aoc] contest, solve the *Day 01* as soon as it is publ
 
 For the following days, copy the `Day01.kt` solution file and increment the day number.
 
-> **Note**
+> [!NOTE]
 >
 > Remember to join the Kotlin contest!
 > 
@@ -51,7 +51,7 @@ After you create a new project based on the current template repository using th
     └── Day01_test.txt      An optional Day 01 test input data used for checks
 ```
 
-> **Note**
+> [!NOTE]
 >
 > All task input files (`src/*.txt`) are excluded from the repository with `.gitignore` – we should not post them publicly, as [Eric Wastl requested for](https://twitter.com/ericwastl/status/1465805354214830081).
 
@@ -77,7 +77,7 @@ To call the algorithm you're implementing, click on the green Play button next t
 
 ![img.png](.github/readme/run.png)
 
-> **Warning**
+> [!IMPORTANT]
 >
 > Before running tasks or tests, make sure to create relevant files, like: `src/Day01.txt` or `src/Day01_test.txt`.
 
