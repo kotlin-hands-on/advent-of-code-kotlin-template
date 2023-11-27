@@ -118,7 +118,7 @@ fun main() {
 }
 ```
 
-> ![NOTE]
+> [!NOTE]
 > 
 > There is a fork of this repository available which utilizes the Amper tool for project configuration, recently [introduced by JetBrains][amper].
 > 
