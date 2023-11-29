@@ -10,6 +10,6 @@ sourceSets {
 
 tasks {
     wrapper {
-        gradleVersion = "8.4"
+        gradleVersion = "8.5"
     }
 }
