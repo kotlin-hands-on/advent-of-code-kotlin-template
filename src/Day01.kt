@@ -24,7 +24,7 @@ fun main() {
     part2(input).println()
 }
 
-fun part2(input: List<String>): Int {
+private fun part2(input: List<String>): Int {
     val digits = (0..9).map { it.toString() } +
             listOf("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 
@@ -49,7 +49,7 @@ fun part2(input: List<String>): Int {
     return input.sumOf { (it.firstDigit() * 10) + it.lastDigit() }
 }
 
-fun part1(input: List<String>): Int {
+private fun part1(input: List<String>): Int {
     fun String.firstDigit(): Int =
         find { it.isDigit() }?.digitToInt() ?: 0
 
