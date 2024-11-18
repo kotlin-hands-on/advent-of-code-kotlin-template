@@ -33,7 +33,7 @@ Copy the `Day01.kt` solution file for the following days and increment the day n
 >
 > Remember to join the Kotlin contest!
 >
-> To do that, edit your project's _About_ section with ⚙️ icon and add the `aoc-2023-in-kotlin` topic to your project.
+> To do that, edit your project's _About_ section with ⚙️ icon and add the `aoc-2024-in-kotlin` topic to your project.
 >
 > **We will find your repository and count you in our giveaway.**
 
