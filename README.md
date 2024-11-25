@@ -7,6 +7,16 @@ We offer you a template prepared to use with [Kotlin][kotlin] language within th
 
 ![][file:cover]
 
+## Live Streams
+
+Join us as we solve the Advent of Code challenges live on stream!
+Follow along to see step-by-step solutions, participate in problem-solving, and learn new strategies to tackle the puzzles.
+Whether you're stuck on a particular problem or just looking to improve your Kotlin skills, our live streams are here to help.
+
+[Watch the live streams here!][youtube-playlist]
+
+[![][file:livestream]][youtube-playlist]
+
 ## Workflow
 **Advent of Code Kotlin Template** is a particular type of GitHub repository that lets you speed up the setup phase and start writing your AoC solutions immediately.
 
@@ -149,4 +159,6 @@ If you are stuck with Kotlin-specific questions or anything related to this temp
 [kotlin]: https://kotlinlang.org
 [slack]: https://surveys.jetbrains.com/s3/kotlin-slack-sign-up
 [file:cover]: .github/readme/cover.png
+[file:livestream]: .github/readme/livestream.png
 [file:utils]: src/Utils.kt
+[youtube-playlist]: https://www.youtube.com/playlist?list=PLlFc5cFwUnmwHaD3-qeoLHnho_PY2g9JX
