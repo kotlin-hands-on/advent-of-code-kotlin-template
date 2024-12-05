@@ -5,8 +5,8 @@ import kotlin.io.path.readText
 
 class AdventOfCodeUtils {
 //    fun readInput(name: String) = this::class.java.classLoader.getResource(name).readText().trim().lines()
-    fun readInput(name: String) = Path("src/$name.txt").readText().trim().lines()
 }
+    fun readInput(name: String) = Path("src/resources/$name.txt").readText().trim().lines()
 
     /**
      * Converts string to md5 hash.

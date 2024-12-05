@@ -1,21 +1,17 @@
-import mu.KotlinLogging
-
 fun main() {
-    val adventOfCodeUtils = AdventOfCodeUtils()
-    val logger = KotlinLogging.logger {}
     val input =
-        adventOfCodeUtils.readInput("main/resources/day2.txt").map { it.split(" ").toList().map { it.toInt() } }
+        readInput("day02").map { it.split(" ").toList().map { it.toInt() } }
 
     val safeList = input.map {
         isSafe(it)
     }
     val res1 = safeList.filter { it }.size
-    logger.info { "day2-1: $res1" }
+    "day2-1: $res1".println()
     val lessSafeList = input.map {
         isSafe(it) || bruteForceCheckSafe(it)
     }
     val res2 = lessSafeList.filter { it }.size
-    logger.info { "day2-2: $res2" }
+    "day2-2: $res2".println()
 }
 
 fun isSafe(input: List<Int>): Boolean {

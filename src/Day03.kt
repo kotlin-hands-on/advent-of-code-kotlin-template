@@ -1,12 +1,11 @@
 fun main() {
-    val utils = AdventOfCodeUtils()
-    val inputs = utils.readInput("day3")
+    val inputs = readInput("day03tj")
     val input = inputs.fold("") { acc, str -> acc.plus(str) }
     val res1 = extractNumberPairs(input)
         .fold(0) { acc2, pair -> acc2 + pair.first * pair.second }
     println("day3-1: $res1")
+
     val input2 = input.split("""do()""").drop(1).map { it.split("""don't()""", limit = 2).first() }
-    println(input2.size)
     input2.forEach(::println)
     val res2 = input2.fold(0) {
         acc, input -> acc + extractNumberPairs(input)
