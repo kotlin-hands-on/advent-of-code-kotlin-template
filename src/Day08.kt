@@ -72,10 +72,6 @@ private fun part2(input: List<String>): Int {
                         continueChecking = false
                     }
                 }
-//                val pair1 = Pair(2 * list[i].first - list[j].first, 2 * list[i].second - list[j].second)
-//                val pair2 = Pair(2 * list[j].first - list[i].first, 2 * list[j].second - list[i].second)
-//                if (pair1.validateCoords(input.lastIndex, input[0].lastIndex)) resList.add(pair1)
-//                if (pair2.validateCoords(input.lastIndex, input[0].lastIndex)) resList.add(pair2)
                 j++
             }
             i++
