@@ -3,8 +3,8 @@ interface Application {
 }
 
 fun main(args: Array<String>) {
-    val app: Application = Day09()
-    val day = 9
+    val app: Application = Day11()
+    val day = 11
     app.run("day${day.toString().padStart(2, '0')}test").printRes(day, true)
     app.run("day${day.toString().padStart(2, '0')}").printRes(day, false)
 }
