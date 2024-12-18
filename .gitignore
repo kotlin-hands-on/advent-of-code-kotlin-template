@@ -3,3 +3,6 @@
 .kotlin/
 build
 local.properties
+
+src/resources/day14-output.txt
+src/resources/day14test-output.txt

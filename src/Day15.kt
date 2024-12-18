@@ -18,6 +18,18 @@ class Day15 : Application {
             }
         val initialCoord = getInitialCoord(inputMap)
         val res1 = this.part1(inputMap, steps, initialCoord)
+        val part2Input = input.map {
+            it.fold(StringBuilder()) { strBuilder, c ->
+                when (c) {
+                    '.' -> strBuilder.append("..")
+                    '@' -> strBuilder.append("@.")
+                    'O' -> strBuilder.append("[]")
+                    '#' -> strBuilder.append("##")
+                    else -> strBuilder
+                }
+            }.toMutableList()
+        }
+        part2Input.println()
         val res2 = this.part2()
         return res1 to res2
     }
@@ -29,7 +41,7 @@ class Day15 : Application {
         steps.forEach { n ->
             coord = computeStep(directions[n], coord)
         }
-        input.forEachIndexed {i, list ->
+        input.forEachIndexed { i, list ->
             list.forEachIndexed { idx, c ->
                 if (c == 'O') {
                     res += 100 * i + idx
@@ -67,7 +79,8 @@ class Day15 : Application {
             val distToEmptyCoord = distToEmptyCoord(dir, coord)
             if (distToEmptyCoord == -1) return coord
             else {
-                input[coord.first + dir.first * distToEmptyCoord][coord.second + dir.second * distToEmptyCoord] = 'O'
+                input[coord.first + dir.first * distToEmptyCoord][coord.second + dir.second * distToEmptyCoord] =
+                    'O'
                 input[coord.plus(dir).first][coord.plus(dir).second] = '@'
                 input[coord.first][coord.second] = '.'
                 return coord.plus(dir)
@@ -79,7 +92,7 @@ class Day15 : Application {
         var res = 0
         var continueSearch = true
         var coords = coord
-        while(continueSearch) {
+        while (continueSearch) {
             coords = coords.plus(dir)
             try {
                 if (input[coords.first][coords.second] == '.') return ++res
