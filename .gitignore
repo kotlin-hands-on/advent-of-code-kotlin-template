@@ -1,6 +1,8 @@
 .gradle
-.idea
+.idea/
 .kotlin/
 build
-src/**/*.txt
 local.properties
+
+src/resources/day14-output.txt
+src/resources/day14test-output.txt
