@@ -6,3 +6,4 @@ local.properties
 
 src/resources/day14-output.txt
 src/resources/day14test-output.txt
+src/resources/*-output.txt
