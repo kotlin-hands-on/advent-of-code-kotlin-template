@@ -1,11 +1,21 @@
 # Advent of Code Kotlin Template
 
 [Advent of Code][aoc] – an annual event in December since 2015.
-Every year since then, with the first day of December, a programming puzzles contest is published every day for twenty-four days.
-A set of Christmas-oriented challenges provide any input you have to use to answer using the language of your choice.
+Every year since then, with the first day of December, a programming puzzles contest is published every day for twenty-five days.
+A set of Christmas-oriented challenges provides any input you have to use to answer using the language of your choice.
 We offer you a template prepared to use with [Kotlin][kotlin] language within this repository.
 
 ![][file:cover]
+
+## Live Streams
+
+Join us as we solve the Advent of Code challenges live on stream!
+Follow along to see step-by-step solutions, participate in problem-solving, and learn new strategies to tackle the puzzles.
+Whether you're stuck on a particular problem or just looking to improve your Kotlin skills, our live streams are here to help.
+
+[Watch the live streams here!][youtube-playlist]
+
+[![][file:livestream]][youtube-playlist]
 
 ## Workflow
 **Advent of Code Kotlin Template** is a particular type of GitHub repository that lets you speed up the setup phase and start writing your AoC solutions immediately.
@@ -17,20 +27,27 @@ After creating a new project based on this template in your account, a dedicated
 It will also personalize code to use your username and project name in namespaces and Gradle properties.
 How cool is that?
 
-Right after the [@actions-user][actions-user] actor pushes the second commit to your repository, you're ready to clone it within the IntelliJ IDEA.
+You can clone it within the IntelliJ IDEA whenever the [@actions-user][actions-user] actor pushes the second commit to your repository.
 
-From now, everything's in your hands!
-Join the [Advent of Code][aoc] contest, solve the Day O1 as soon as it is published.
+> [!IMPORTANT]
+>
+> Right after opening the project in IntelliJ IDEA, verify if you use at least **Java 11** as Project SDK.
+> To do that, visit [Project Structure Settings][docs-project-structure] (<kbd>⌘ Cmd</kbd><kbd>;</kbd> on macOS or <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>S</kbd> on Windows/Linux).
 
-For the following days, copy the `Day01.kt` solution file and increment the day number.
+From now on, everything's in your hands!
+Join the [Advent of Code][aoc] contest to solve the *Day 01* as soon as it is published.
 
+Copy the `Day01.kt` solution file for the following days and increment the day number.
+
+> [!NOTE]
+>
 > Remember to join the Kotlin contest!
-> 
-> To do that, edit your project's _About_ section with ⚙️ icon and add the `aoc-2022-in-kotlin` topic to your project.
-> 
-> **We will find your repository and count you in our giveaway.** 
+>
+> To do that, edit your project's _About_ section with ⚙️ icon and add the `aoc-2025-in-kotlin` topic to your project.
+>
+> **We will find your repository and count you in our giveaway.**
 
-## Content
+## Setup
 
 After you create a new project based on the current template repository using the **Use this template** button, a bare minimal scaffold will appear in your GitHub account with the following structure:
 
@@ -38,23 +55,23 @@ After you create a new project based on the current template repository using th
 .
 ├── README.md               README file
 ├── build.gradle.kts        Gradle configuration created with Kotlin DSL
-├── gradle
-│   └── wrapper             Gradle Wrapper
-├── gradle.properties       Gradle configuration properties
-├── gradlew                 *nix Gradle Wrapper script
-├── gradlew.bat             Windows Gradle Wrapper script
 ├── settings.gradle.kts     Gradle project settings
+├── gradle*                 Gradle wrapper files
 └── src
     ├── Day01.kt            An empty implementation for the first AoC day
+    ├── Utils.kt            A set of utility methods shared across your days
+    │                       
+    │                       (create those files manually)
     ├── Day01.txt           An empty file for the Day 01 input data
-    ├── Day01_test.txt      An optional Day 01 test input data used for checks
-    └── Utils.kt            A set of utility methods shared across your days
+    └── Day01_test.txt      An optional Day 01 test input data used for checks
 ```
 
-> Note: All task input files are excluded from the repository with `.gitignore` – we should not post them publicly, as Eric Wastl asks for: [Tweet](https://twitter.com/ericwastl/status/1465805354214830081).
+> [!NOTE]
+>
+> All task input files (`src/*.txt`) are excluded from the repository with `.gitignore` – we should not post them publicly, as [Eric Wastl requested for](https://twitter.com/ericwastl/status/1465805354214830081).
 
-When the first puzzle appears, go to the `Day01.kt` and for each `part1` and `part2` functions, provide an algorithm implementation using the `input` data loaded from the `src/Day01.txt` file.
-This input data is common for both parts, and you can find it on the bottom of each day on the [Advent of Code][aoc] page.
+When the first puzzle appears, go to the `Day01.kt`, and for each `part1` and `part2` function, provide an algorithm implementation using the `input` data loaded from the `src/Day01.txt` file.
+This input data is common for both parts, and you can find it at the bottom of each day on the [Advent of Code][aoc] page.
 
 To read the input data, you can go with the `readInput(name: String)` utility method provided in the [`Utils.kt`][file:utils] file, like:
 
@@ -69,10 +86,20 @@ fun main() {
 }
 ```
 
+## Running
+
+To call the algorithm you're implementing, click the green Play button next to the `fun main()` definition.
+
+![img.png](.github/readme/run.png)
+
+> [!IMPORTANT]
+>
+> Create relevant files Before running tasks or tests, like: `src/Day01.txt` or `src/Day01_test.txt`.
+
 The [`Utils.kt`][file:utils] file also contains the `String.md5()` method for generating MD5 hash out of the given string and expects more helper functions for the sake of the [KISS principle][kiss].
 
 Each puzzle describes some test conditions, a small portion of the information that helps check if the produced value for the given test input is valid.
-To handle that case, you can put such an input into a separated file and perform a check against the output, like:
+To handle that case, you can put such an input into a separate file and perform a check against the output, like:
 
 ```kotlin
 fun main() {
@@ -84,11 +111,11 @@ fun main() {
 ```
 
 The current approach of providing both `part1` and `part2` solutions within the single `Day##.kt` file may sometimes bring a disadvantage due to the first solution calculation when we expect to work on the second part only.
-With simple cases that don't consume too much of your time and resources that can be almost unnoticeable, but when solution takes seconds, it is worth considering breaking daily solution into two separated pieces, like `Day07_part1.kt` and `Day07_part2.kt`.
+With simple cases that don't consume too much of your time and resources that can be almost unnoticeable, but when the solution takes seconds, it is worth considering breaking the daily solution into two separated pieces, like `Day07_part1.kt` and `Day07_part2.kt`.
 
 The final result of your algorithm will be printed on the screen so that you can pass it to the Advent of Code website.
 
-To go with the next day, place the `Day02.txt` file into the `src` with relevant input data and create `Day02.kt` file with a similar code scaffold:
+To go with the next day, place the `Day02.txt` file into the `src` with relevant input data and create a `Day02.kt` file with a similar code scaffold:
 
 ```kotlin
 fun main() {
@@ -106,9 +133,15 @@ fun main() {
 }
 ```
 
+> [!NOTE]
+>
+> There is a fork of this repository available that utilizes the Amper tool for project configuration, recently [introduced by JetBrains][amper].
+>
+> For more, see [Advent of Code Kotlin Template — Amper][amper-template] project.
+
 ## Getting help
 
-If you stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
+If you are stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
 
 - [Kotlin docs][docs]
 - [Kotlin Slack][slack]
@@ -117,10 +150,15 @@ If you stuck with Kotlin-specific questions or anything related to this template
 
 [actions-user]: https://github.com/actions-user
 [aoc]: https://adventofcode.com
+[amper]: https://blog.jetbrains.com/blog/2023/11/09/amper-improving-the-build-tooling-user-experience/
+[amper-template]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template-amper
 [docs]: https://kotlinlang.org/docs/home.html
+[docs-project-structure]: https://www.jetbrains.com/help/idea/project-settings-and-structure.html
 [issues]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template/issues
 [kiss]: https://en.wikipedia.org/wiki/KISS_principle
 [kotlin]: https://kotlinlang.org
 [slack]: https://surveys.jetbrains.com/s3/kotlin-slack-sign-up
 [file:cover]: .github/readme/cover.png
+[file:livestream]: .github/readme/livestream.png
 [file:utils]: src/Utils.kt
+[youtube-playlist]: https://www.youtube.com/playlist?list=PLlFc5cFwUnmwHaD3-qeoLHnho_PY2g9JX

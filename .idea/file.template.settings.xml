@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExportableFileTemplateSettings">
+    <default_templates>
+      <template name="Advent of Code.kt" file-name="Day${Day}" reformat="true" live-template-enabled="true">
+        <template name="Advent of Code.kt.child.0.txt" file-name="Day${Day}" reformat="true" live-template-enabled="false" />
+      </template>
+      <template name="Advent of Code.kt.child.0.txt" file-name="Day${Day}" reformat="true" live-template-enabled="false" />
+    </default_templates>
+  </component>
+</project>

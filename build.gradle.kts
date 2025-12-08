@@ -1,20 +1,16 @@
 plugins {
-    kotlin("jvm") version "1.7.22"
+    kotlin("jvm") version "2.2.21"
 }
 
-repositories {
-    mavenCentral()
+sourceSets {
+    main {
+        kotlin.srcDir("src")
+    }
 }
 
 tasks {
-    sourceSets {
-        main {
-            java.srcDirs("src")
-        }
-    }
-
     wrapper {
-        gradleVersion = "7.6"
+        gradleVersion = "9.2.1"
     }
 
     task("generateNextDay") {
